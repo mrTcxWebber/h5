@@ -23,6 +23,6 @@ jobs:
           REMOTE_HOST: "182.254.229.232"
           REMOTE_USER: "root"
           REMOTE_PASSWORD: "abc1234@Q"
-          REMOTE_PATH: "/root/h5yf"
+          REMOTE_PATH: "/root/h5"
           # 项目目录中的文件夹例如: dist/
           # SOURCE: ""
