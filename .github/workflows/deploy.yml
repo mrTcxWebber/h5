@@ -1,0 +1,28 @@
+name: Build app and deploy to tengxunyun h5yf
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    # runs-on 指定job任务运⾏所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+    steps:
+      # 获取源码
+      - name: 迁出代码
+        # 使⽤action库 actions/checkout获取源码
+        uses: actions/checkout@master
+
+      # 部署到腾讯云 h5
+      - name: deploy
+        id: funny-deploy
+        uses: BoatNg/funny-deploy@master
+        env:
+          REMOTE_HOST: "182.254.229.232"
+          REMOTE_USER: "root"
+          REMOTE_PASSWORD: "abc1234@Q"
+          REMOTE_PATH: "/root/h5yf"
+          # 项目目录中的文件夹例如: dist/
+          # SOURCE: ""
